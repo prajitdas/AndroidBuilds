@@ -1,0 +1,167 @@
+#titleFaceBlock{color:white; font-size:60px;}
+#textFaceBlock{color:white; font-size:35px;}
+#descFaceBlock{color:white; font-size:20px;}
+#textBio{color:white; font-size:20px; font-family: My Font Two,Open Sans,sans-serif;}
+#textPosition{color:#BAC1D1; font-size:15px; font-family: My Font Two,Open Sans,sans-serif;}
+#textAbout{color:white; font-size:20px; font-family: My Font Two,Open Sans,sans-serif;}
+
+.imageHow {width:100%; height:100%; background:blue; overflow: hidden;}
+.textHow {color:white; font-size:20px; text-align:center}
+.container hr {margin: 2px 0;}
+
+
+
+html, body {
+height:100%;
+margin:0;
+padding:0;
+}
+.carousel, .item, .active {
+height:100%;
+}
+.carousel-inner {
+height:100%;
+}
+
+
+h1 {
+    font-family: 'Droid Serif', Georgia, Times, serif;
+    font-size: 49px;
+    line-height: 65px;
+}
+ 
+p {
+    font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+
+.logo {padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	padding-left: 20px;}
+
+.opacity-box {
+	background-color: rgba(0,0,0,0.4);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
+	/*display: inline-block;*/
+	border-radius: 10px;
+}
+
+.opacity-box-blue {
+	background-color: rgba(0,0,60,0.0);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
+	/*display: inline-block;*/
+	border-radius: 10px;
+}
+
+.opacity-box-red {
+	background-color: rgba(60,0,0,0.4);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
+	/*display: inline-block;*/
+	border-radius: 10px;
+}
+
+.opacity-box-green {
+	background-color: rgba(0,60,0,0.4);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
+	/*display: inline-block;*/
+	border-radius: 10px;
+}
+
+.vcenter {
+	margin-top: 50px;
+}
+
+/* Override the bootstrap style */
+blockquote {
+    border-left: none;
+}
+
+/* Insert the pseudo element - replicating what FontAwesome does */
+blockquote:before {
+    content: "\f10d"; 
+    font-family: FontAwesome;
+    float: left;
+    margin-right: 10px;
+}
+
+/*
+for 404 page
+*/
+body { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);}
+.error-template {padding: 40px 15px;text-align: center;}
+.error-actions {margin-top:15px;margin-bottom:15px;}
+.error-actions .btn { margin-right:10px; }
+
+/* Create square icons, white logo on colored background */
+
+#social-bar .icon {
+    color: white;
+    border-radius: 4px;
+    border: 1px outset rgba(128, 128, 128, 0.5);
+    min-width: 27px;
+    line-height: 27px;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(128, 128, 128, 0.5);
+}
+
+#social-bar a {
+    margin-right: 5px;
+    padding: 5px; /* Increase hit rectangle for touch devices */
+}
+
+#social-bar a:first-child {
+    padding-left: 0;
+}
+
+/* Set icon color related to the service */
+
+#social-bar a span {
+    margin-left: 5px;
+}
+
+#social-bar .fa-facebook{
+    background: #3B5998;
+}
+
+#social-bar .fa-twitter {
+    background: #00ACED;
+}
+
+#social-bar .fa-google-plus {
+    background: #E14107;
+}
+
+/* Don't underline icon etc. */
+#social-bar a:hover {
+    text-decoration: none;
+}
+
+#social-bar a:hover span {
+    text-decoration: underline;
+    color: #333333; /* Match icon highlight color */
+}
+
+/* Animate mouse hover */
+#social-bar a .icon {
+   transition: background 0.5s;
+}
+
+#social-bar a:hover .icon {
+    background: #333333;
+    transition: background 0.5s;
+}

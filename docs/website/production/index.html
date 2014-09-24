@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Face-Block.me</title>
+	<!-- Included Bootstrap CSS Files -->
+	<link rel="stylesheet" href="./js/bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="./css/jquery.carousel.fullscreen.css" />
+	<link rel="stylesheet" href="./css/main.css" />
+	<link rel="stylesheet" href="./font-awesome-4.0.3/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="favicon.ico" >
+	<link rel="icon" type="image/gif" href="animated_favicon.gif" >
+	<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+	<div class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+		<div class="container">
+
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active activable 0" data-ind="0"><a href="#" data-target="#carousel-example-generic" data-slide-to="0" style="font-size:18px;" onclick="stopVideo()"><span>Face-Block</span><span style="color:#B8B8B8">.me</span></a></li>
+					<li class="activable 1" data-ind="1"><a href="#how" data-target="#carousel-example-generic" data-slide-to="1">Glass Users</a></li>
+					<li class="activable 2" data-ind="2"><a href="#how" data-target="#carousel-example-generic" data-slide-to="2">Everyone Else</a></li>
+					<li class="activable 3" data-ind="3"><a href="#about" data-target="#carousel-example-generic" data-slide-to="3">About</a></li>
+					<li class="activable 4" data-ind="4"><a href="#about" data-target="#carousel-example-generic" data-slide-to="4">Team</a></li>
+					<li><a href="mailto:faceblocking@gmail.com" target="_blank">Contact</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="https://twitter.com/intent/tweet?text=Check+out+FaceBlock+a+cool+new+app+to+take+privacy-aware+pictures.+http%3A%2F%2Fwww.face-block.me" target="_blank"><i class="fa fa-twitter"></i> Tweet </a></li>
+					<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.face-block.me" target="_blank"><i class="fa fa-facebook-square"></i> Share </a></li>
+					<li><a href="https://plus.google.com/share?url=http://www.face-block.me/" target="_blank"><i class="fa fa-google-plus-square"></i> Share </a></li>
+					<li><a href="mailto:?Subject=FaceBlock&amp;Body=Check%20out%20FaceBlock%2C%20a%20cool%20new%20app%20to%20take%20privacy-aware%20pictures.%20http%3A%2F%2Fwww.face-block.me" target="_blank"><i class="fa fa-envelope-o"></i> Email</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- Carousel -->
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+		<!--1-->
+			<div class="item active" id="videoContainer">
+				<img src="./img/image_self_1.jpg" alt="" />
+				<div class="container">
+						</br></br></br>
+						<h1 style="color:white; font-size:60px;" class="opacity-box text-center">
+							<span>Face-Block</span><span style="color:#B8B8B8">.me</span>
+							<p></p>
+						<p id="textFaceBlock" class="text-center" >Privacy-Aware Pictures for everyone</p>
+						</h1>
+					<div class="opacity-box">
+							</br></br>
+							<div class="span7 text-center">
+								<button type="button" style="width:200px" class="btn btn-danger btn-lg " class="text-center" onclick="showVideo();">
+									Watch the video
+								</button>
+							</div>
+							</br></br>
+							<div class="span7 text-center">
+								<div class="btn-group">
+									<a href="#" data-target="#carousel-example-generic" data-slide-to="1" class="btn btn-info btn-lg" style="width:200px">For Glass Users</a>
+									<a href="#" data-target="#carousel-example-generic" data-slide-to="2" class="btn btn-primary btn-lg" style="width:200px">For Everyone Else</a>
+								</div>
+							</div>
+
+							<!--The Social buttons bar-->
+							</br></br>
+							<div class="span7 text-center">
+							<div id="social-bar">
+								<a style="color:white;font-size:20px" href="https://www.facebook.com/FaceBlock.Me" target="_blank">
+									<i class="fa fa-facebook" style="width:15px"></i>
+									<span>Like</span>
+								</a>
+								<a  style="color:white;font-size:20px" href="https://twitter.com/Face_Block" target="_blank">
+									<i class="fa fa-twitter"></i>
+									<span>Follow</span>
+								</a>
+								<a  style="color:white;font-size:20px" rel="publisher" href="https://plus.google.com/+FaceBlockMeNow" target="_blank">
+									<i class="fa fa-google-plus"></i>
+									<span>Follow</span>
+								</a>
+							</div>
+							</div>
+						</br></br></br></br>
+					</div>
+					<div class="carousel-caption">
+						<h1></h1>
+						<p class="lead"></p>
+					</div>
+				</div>
+			</div>
+
+			<!--FACEBLOCK FOR GLASS USERS-->
+			<div class="item">
+				<img src="./img/bg_suburb.jpg" alt="" />
+				<div class="container">
+					</br></br></br>
+					<h1 style="color:white; font-size:60px;" class="opacity-box text-center">
+						FaceBlock for Glass users
+					</h1>
+					<div class="row opacity-box-red">
+						<div class="col-1 col-sm-4 text-center vcenter">
+							<p style="color:white; font-size:30px;">
+								Using Google Glass for photography can make you unwelcoming to people
+							</p>
+						</div>
+						<div class="col-2 col-sm-8 text-center">
+							<div class="center-block" id="GU_mid">
+							</div>
+						</div>
+					</div>
+
+					<div class="row opacity-box-green">
+						<div class="col-1 col-sm-8 text-center">
+							<div class="center-block" id="GU_end">
+							</div>
+						</div>
+
+						<div class="col-2 col-sm-4 text-center vcenter">
+							<p style="color:white; font-size:30px;">
+								With FaceBlock respecting personal privacy is as easy as using Google Glass itself
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-caption">
+					<h1></h1>
+					<p class="lead"></p>
+				</div>
+			</div>
+
+		<!--FACEBLOCK FOR MOBILE USERS-->
+		<div class="item">
+				<img src="./img/bg_suburb.jpg" alt="" />
+				<div class="container">
+					</br></br></br>
+					<h1 style="color:white; font-size:60px;" class="opacity-box text-center">
+						FaceBlock for everyone else
+					</h1>
+					<div class="row opacity-box-red">
+						<div class="col-1 col-sm-4 text-center vcenter">
+							<p style="color:white; font-size:30px;">
+								Being photographed without consent can be a worry
+							</p>
+						</div>
+						<div class="col-2 col-sm-8 text-center">
+							<div class="center-block" id="MU_mid">
+							</div>
+						</div>
+					</div>
+					<div class="row opacity-box-green">
+						<div class="col-1 col-sm-8 text-center">
+							<div class="center-block" id="MU_end">
+							</div>
+						</div>
+
+						<div class="col-2 col-sm-4 text-center vcenter">
+							<p style="color:white; font-size:30px;">
+								Opt out of pictures automagically with FaceBlock
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-caption">
+					<h1></h1>
+					<p class="lead"></p>
+				</div>
+			</div>
+
+		<!--ABOUT-->
+		<div class="item">
+				<img src="./img/bg_suburb.jpg" alt="" />
+				<div class="container">
+					</br></br></br>
+					<h1 style="color:white; font-size:60px;" class="opacity-box text-center">
+						<span>Face-Block</span><span style="color:#B8B8B8">.me!</span></a>
+					</h1>
+
+						<div class="col-1 col-sm-12 opacity-box">
+							</br></br>
+							<img class="pull-right logo" src="./img/FaceBlockLogo.png"/ id="donottouch">
+							<p id="textAbout" >If you are a Google Glass user, you might have been greeted with concerned looks or raised eyebrows at public places. FaceBlock helps to protect the privacy of people around you by allowing them to specify whether or not to be included in your pictures.</p>
+							</br></br>
+							<p id="textAbout">FaceBlock takes regular pictures taken by your smartphone or Google Glass as input and converts them into <i><b>Privacy-Aware Pictures</b></i>. These pictures are generated by using a combination of Face Detection and Face Recognition algorithms. By using FaceBlock, a user can take a picture of herself and specify her policy/rule regarding pictures taken by others (in this case ‘obscure my face in pictures from strangers’). FaceBlock would automatically generate a mathematical representation of face identifier for this picture. Using Bluetooth, FaceBlock can automatically detect and share this policy with Glass users near by.</p>
+							</br></br>
+							<p id="textAbout">FaceBlock is a proof of concept implementation of a system that can create Privacy-Aware Pictures using smart devices. The pervasiveness of Privacy-Aware Pictures could be a right step towards balancing privacy needs and comfort afforded by technology. Thus, we can get the best out of Wearable technology without being oblivious about the privacy of those around you. Read more <a href="http://ebiquity.umbc.edu/blogger/2014/03/27/dont-be-a-glhole-use-faceblock/">here</a>.</p>
+							</br></br>
+						</div>
+				</div>
+				<div class="carousel-caption">
+					<h1></h1>
+					<p class="lead"></p>
+				</div>
+			</div>
+
+		<!--TEAM-->
+			<div class="item">
+				<img src="img/umbc.jpg" alt="" />
+				<div class="container">
+					</br></br></br></br></br></br>
+					<div class="row clearfix">
+
+						<div class="col-3 col-sm-4 text-center opacity-box"><p></p><a HREF="http://webdiis.unizar.es/~ryus/" target="_blank"><img src="http://www.gravatar.com/avatar/1ff088a50a7674fc9bcbcfdfe9e8a0b7?s=150" class="img-circle" alt="Circular Image" id="donottouch"><p></p><span id="textBio">Roberto Yus</span><p></p><span id="textPosition">PhD Student, UNIZAR</span></a><p></p></div>
+
+						<div class="col-3 col-sm-4 text-center opacity-box"><p></p><a HREF="http://primal.pw/" target="_blank"><img src="http://www.gravatar.com/avatar/bacdb9eaad2826ecb85cc7106cf84656?s=150" class="img-circle" alt="Circular Image" id="donottouch"><p></p><span id="textBio">Primal Pappachan</span><p></p><span id="textPosition">MS Student, UMBC</span></a><p></p></div>
+
+						<div class="col-3 col-sm-4 text-center opacity-box"><p></p><a HREF="http://www.umbc.edu/~prajit1" target="_blank"><img src="http://www.gravatar.com/avatar/e5cfbe92fef3aa2d6e21a720bf22c2a7?s=150" class="img-circle" alt="Circular Image" id="donottouch"><p></p><span id="textBio">Prajit Kumar Das</span><p></p><span id="textPosition">PhD Student, UMBC</span></a><p></p></div>
+					</div>
+					</br></br></br></br>
+					<div class="row clearfix">
+						<div class="col-3 col-sm-4 text-center opacity-box"><p></p><a HREF="http://webdiis.unizar.es/~mena/" target="_blank"><img src="img/emena.jpg" height=150 class="img-circle" alt="Circular Image" id="donottouch"><p></p><span id="textBio">Dr. Eduardo Mena</span><p></p><span id="textPosition">Professor, UNIZAR</span></a><p></p></div>
+
+						<div class="col-3 col-sm-4 text-center opacity-box"><p></p><a HREF="http://www.csee.umbc.edu/~joshi/" target="_blank"><img src="img/ajoshi.jpg" height=150 class="img-circle" alt="Circular Image" id="donottouch"><p></p><span id="textBio">Dr. Anupam Joshi</span><p></p><span id="textPosition">Professor, UMBC</span></a><p></p></div>
+
+						<div class="col-3 col-sm-4 text-center opacity-box"><p></p><a HREF="http://www.csee.umbc.edu/~finin/" target="_blank"><img src="http://www.gravatar.com/avatar/5c66c37bbfa0db67626261e281e60742?s=150" class="img-circle" alt="Circular Image" id="donottouch"><p></p><span id="textBio">Dr. Tim Finin</span><p></p><span id="textPosition">Professor, UMBC</span></a><p></p></div>
+
+					</div>
+
+					<div class="carousel-caption">
+						<h1></h1>
+						<p class="lead"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Controls -->
+		<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev" onClick="changeActiveSlide(-1)">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#carousel-example-generic" data-slide="next" onClick="changeActiveSlide(1)">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div>
+
+	<script src="http://www.youtube.com/player_api"></script>
+
+	<script>
+	function SpriteAnim (options) {
+	  var timerId, i = 0,
+		  element = document.getElementById(options.elementId);
+
+	  element.style.width = options.width + "px";
+	  element.style.height = options.height + "px";
+	  element.style.backgroundRepeat = "no-repeat";
+	  element.style.backgroundImage = "url(" + options.sprite + ")";
+
+	  var interval=350;
+	  var stoped=false;
+
+	  timerId = setInterval(function () {
+		if (i >= options.frames) {
+		  i = 0;
+		}
+		if ((i == options.stopFrame || i == options.stopFrame2) && !stoped) {
+			stoped=true;
+		}
+		else{
+			stoped=false;
+			element.style.backgroundPosition = "0px -" + i * options.height + "px";
+			i++;
+		}
+	  }, interval);
+
+	  this.stopAnimation = function () {
+		clearInterval(timerId);
+	  };
+	}
+
+
+	var muMID = new SpriteAnim({
+	  width: 447,
+	  height: 225.5,
+	  frames: 10,
+	  sprite: "./img/MU_mid_test.png",
+	  elementId : "MU_mid",
+	  stopFrame: 6,
+	  stopFrame2: -1
+	});
+
+	var muEND = new SpriteAnim({
+	  width: 473,
+	  height: 225.5,
+	  frames: 10,
+	  sprite: "./img/MU_end_test.png",
+	  elementId : "MU_end",
+	  stopFrame: 6,
+	  stopFrame2: -1
+	});
+
+	var guEND = new SpriteAnim({
+	  width: 550,
+	  height: 225.5,
+	  frames: 10,
+	  sprite: "./img/GU_end_test.png",
+	  elementId : "GU_end",
+	  stopFrame: 6,
+	  stopFrame2: -1
+	});
+
+	var guMID = new SpriteAnim({
+	  width: 554,
+	  height: 225.5,
+	  frames: 10,
+	  sprite: "./img/GU_mid_test.png",
+	  elementId : "GU_mid",
+	  stopFrame: 5,
+	  stopFrame2: 3
+	});
+
+
+
+	</script>
+
+	<script>
+	var content;
+	var player; // create youtube player
+    	var playerState;
+	function showVideo(){
+
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ 			window.location.href = "https://www.youtube.com/watch?v=IseoIWNWiR8";
+ 		}
+ 		else{
+ 			playerState = 1;
+			videoContainer = document.getElementById("videoContainer");
+
+			content=videoContainer.innerHTML;
+			videoContainer.innerHTML ="<div id='player'></div>";
+
+			onYouTubePlayerAPIReady();
+		}
+	}
+	
+	
+	function changeActiveSlide(dir) {
+		var act=$('.navbar li.active').data('ind');
+		$('.navbar li.active').removeClass('active');
+		act+=dir;
+		if(act<0)
+			act=4;
+		if(5==act)
+			act=0;
+		
+		var nameClass='.navbar li.'+act;
+		$(nameClass).addClass('active');
+	}
+		
+
+	function showMain(){
+		videoContainer = document.getElementById("videoContainer");
+		videoContainer.innerHTML =	content;
+	}
+
+    function onYouTubePlayerAPIReady() {
+        player = new YT.Player('player', {
+          height: '100%',
+          width: '100%',
+          videoId: 'IseoIWNWiR8',
+		  playerVars: {
+            controls: 0,
+            showinfo: 0 ,
+            modestbranding: 1,
+			autoplay: 1,
+		  },
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+    }
+
+    // autoplay video
+    function onPlayerReady(event) {
+	playerState = event.data;
+        event.target.playVideo();
+    }
+
+    // when video ends
+    function onPlayerStateChange(event) {
+		playerState = event.data;
+        if(event.data === 0) {
+			showMain();
+        }
+    }
+
+
+	   //stop video and return to home
+     function stopVideo(){
+     	if (playerState == 1 || playerState == 2){ //if youtube video is playing
+     		//player.stopVideo();
+     		showMain();
+     	}
+     }
+
+
+		//Google Analytics code
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-49463402-1', 'face-block.me');
+			ga('send', 'pageview');
+
+	</script>
+
+	<script src="./js/jquery-1.10.0.min.js"></script>
+	<script src="./js/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./js/jquery.carousel.fullscreen.js"></script>
+	</body>
+</html>
