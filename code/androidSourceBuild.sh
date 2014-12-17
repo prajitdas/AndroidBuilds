@@ -88,8 +88,8 @@ else
 				When building Ice Cream Sandwich (4.0.x) or older, ccache is in a different location:
 				This setting is stored in the CCACHE_DIR and is persistent."
 		export USE_CCACHE=1
-		mkdir -p ~/workingFolder/androidBuilds/$2/ccache
-		export CCACHE_DIR=~/workingFolder/androidBuilds/$2/ccache
+		mkdir -p ~/workingFolder/AndroidBuilds/builds/$2/ccache
+		export CCACHE_DIR=~/workingFolder/AndroidBuilds/builds/$2/ccache
 		prebuilts/misc/linux-x86/ccache/ccache -M 50G
 		
 		#echo "	Using a separate output directory
@@ -100,7 +100,7 @@ else
 		#		For instance, if you have source trees as /source/master1 and /source/master2 and OUT_DIR_COMMON_BASE is set to /output, the output directories will be /output/master1 and /output/master2.
 		#		It's important in that case to not have multiple source trees stored in directories that have the same name, as those would end up sharing an output directory, with unpredictable results.
 		#		This is only supported on Jelly Bean (4.1) and newer, including the master branch."
-		#export OUT_DIR_COMMON_BASE=~/workingFolder/androidBuilds/$2/out
+		#export OUT_DIR_COMMON_BASE=~/workingFolder/AndroidBuilds/builds/$2/out
 		
 		#Downloading the source
 		#Build	Branch	Version	Supported devices
@@ -196,7 +196,7 @@ else
 		PATH=~/bin:$PATH
 		curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 		chmod a+x ~/bin/repo
-		cd ~/workingFolder/androidBuilds/$2
+		cd ~/workingFolder/AndroidBuilds/builds/$2
 		repo init -u https://android.googlesource.com/platform/manifest -b $2
 		repo sync
 
