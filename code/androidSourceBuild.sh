@@ -103,96 +103,95 @@ else
 		#export OUT_DIR_COMMON_BASE=~/workingFolder/androidBuilds/$2/out
 		
 		#Downloading the source
-		/*	Build	Branch	Version	Supported devices
-			LRX22C	android-5.0.1_r1	Lollipop	Nexus 4, Nexus 5, Nexus 6 (shamu), Nexus 7 (flo), Nexus 9 (volantis/volantisg), Nexus 10
-			LRX21V	android-5.0.0_r7.0.1	Lollipop	Nexus Player (fugu)
-			LRX21T	android-5.0.0_r6.0.1	Lollipop	Nexus 4
-			LRX21R	android-5.0.0_r5.1.0.1	Lollipop	Nexus 9 (volantis)
-			LRX21Q	android-5.0.0_r5.0.1	Lollipop	Nexus 9 (volantis)
-			LRX21P	android-5.0.0_r4.0.1	Lollipop	Nexus 7 (flo/grouper), Nexus 10
-			LRX21O	android-5.0.0_r3.0.1	Lollipop	Nexus 5 (hammerhead), Nexus 6 (shamu)
-			LRX21M	android-5.0.0_r2.0.1	Lollipop	Nexus Player (fugu)
-			LRX21L	android-5.0.0_r1.0.1	Lollipop	Nexus 9 (volantis)
-			KTU84Q	android-4.4.4_r2	KitKat	Nexus 5 (hammerhead) (For 2Degrees/NZ, Telstra/AUS and India ONLY)
-			KTU84P	android-4.4.4_r1	KitKat	Nexus 5, Nexus 7 (flo/deb/grouper/tilapia), Nexus 4, Nexus 10
-			KTU84M	android-4.4.3_r1.1	KitKat	Nexus 5 (hammerhead)
-			KTU84L	android-4.4.3_r1	KitKat	Nexus 7 (flo/deb/grouper/tilapia), Nexus 4, Nexus 10
-			KVT49L	android-4.4.2_r2	KitKat	Nexus 7 (deb Verizon)
-			KOT49H	android-4.4.2_r1	KitKat	Nexus 5, Nexus 7 (flo/deb/grouper/tilapia), Nexus 4, Nexus 10
-			KOT49E	android-4.4.1_r1	KitKat	Nexus 5, Nexus 7 (flo/deb/grouper/tilapia), Nexus 4, Nexus 10
-			KRT16S	android-4.4_r1.2	KitKat	Nexus 7 (flo/deb/grouper/tilapia), Nexus 4, Nexus 10
-			KRT16M	android-4.4_r1	KitKat	Nexus 5 (hammerhead)
-			JLS36I	android-4.3.1_r1	Jelly Bean	Nexus 7 (deb)
-			JLS36C	android-4.3_r3	Jelly Bean	Nexus 7 (deb)
-			JSS15R	android-4.3_r2.3	Jelly Bean	Nexus 7 (flo)
-			JSS15Q	android-4.3_r2.2	Jelly Bean	Nexus 7 (flo)
-			JSS15J	android-4.3_r2.1	Jelly Bean	Nexus 7 (flo/deb)
-			JSR78D	android-4.3_r2	Jelly Bean	Nexus 7 (deb)
-			JWR66Y	android-4.3_r1.1	Jelly Bean	Galaxy Nexus, Nexus 7 (grouper/tilapia), Nexus 4, Nexus 10
-			JWR66V	android-4.3_r1	Jelly Bean	Galaxy Nexus, Nexus 7 (grouper/tilapia), Nexus 4, Nexus 10
-			JWR66N	android-4.3_r0.9.1	Jelly Bean	Galaxy Nexus, Nexus 7 (grouper/tilapia/flo), Nexus 4, Nexus 10
-			JWR66L	android-4.3_r0.9	Jelly Bean	Nexus 7
-			JDQ39E	android-4.2.2_r1.2	Jelly Bean	Nexus 4
-			JDQ39B	android-4.2.2_r1.1	Jelly Bean	Nexus 7
-			JDQ39	android-4.2.2_r1	Jelly Bean	Galaxy Nexus, Nexus 7, Nexus 4, Nexus 10
-			JOP40G	android-4.2.1_r1.2	Jelly Bean	Nexus 4
-			JOP40F	android-4.2.1_r1.1	Jelly Bean	Nexus 10
-			JOP40D	android-4.2.1_r1	Jelly Bean	Galaxy Nexus, Nexus 7, Nexus 4, Nexus 10
-			JOP40C	android-4.2_r1	Jelly Bean	Galaxy Nexus, Nexus 7, Nexus 4, Nexus 10
-			JZO54M	android-4.1.2_r2.1	Jelly Bean	
-			JZO54L	android-4.1.2_r2	Jelly Bean	
-			JZO54K	android-4.1.2_r1	Jelly Bean	Nexus S, Galaxy Nexus, Nexus 7
-			JRO03S	android-4.1.1_r6.1	Jelly Bean	Nexus 7
-			JRO03R	android-4.1.1_r6	Jelly Bean	Nexus S 4G
-			JRO03O	android-4.1.1_r5	Jelly Bean	Galaxy Nexus
-			JRO03L	android-4.1.1_r4	Jelly Bean	Nexus S
-			JRO03H	android-4.1.1_r3	Jelly Bean	
-			JRO03E	android-4.1.1_r2	Jelly Bean	Nexus S
-			JRO03D	android-4.1.1_r1.1	Jelly Bean	Nexus 7
-			JRO03C	android-4.1.1_r1	Jelly Bean	Galaxy Nexus
-			IMM76L	android-4.0.4_r2.1	Ice Cream Sandwich	 
-			IMM76K	android-4.0.4_r2	Ice Cream Sandwich	Galaxy Nexus
-			IMM76I	android-4.0.4_r1.2	Ice Cream Sandwich	Galaxy Nexus
-			IMM76D	android-4.0.4_r1.1	Ice Cream Sandwich	Nexus S, Nexus S 4G, Galaxy Nexus
-			IMM76	android-4.0.4_r1	Ice Cream Sandwich	
-			IML77	android-4.0.3_r1.1	Ice Cream Sandwich	
-			IML74K	android-4.0.3_r1	Ice Cream Sandwich	Nexus S
-			ICL53F	android-4.0.2_r1	Ice Cream Sandwich	Galaxy Nexus
-			ITL41F	android-4.0.1_r1.2	Ice Cream Sandwich	Galaxy Nexus
-			ITL41D	android-4.0.1_r1.1	Ice Cream Sandwich	Galaxy Nexus
-			ITL41D	android-4.0.1_r1	Ice Cream Sandwich	Galaxy Nexus
-			GWK74	android-2.3.7_r1	Gingerbread	Nexus S 4G
-			GRK39F	android-2.3.6_r1	Gingerbread	Nexus One, Nexus S
-			GRK39C	android-2.3.6_r0.9	Gingerbread	Nexus S
-			GRJ90	android-2.3.5_r1	Gingerbread	Nexus S 4G
-			GRJ22	android-2.3.4_r1	Gingerbread	Nexus One, Nexus S, Nexus S 4G
-			GRJ06D	android-2.3.4_r0.9	Gingerbread	Nexus S 4G
-			GRI54	android-2.3.3_r1.1	Gingerbread	Nexus S
-			GRI40	android-2.3.3_r1	Gingerbread	Nexus One, Nexus S
-			GRH78C	android-2.3.2_r1	Gingerbread	Nexus S
-			GRH78	android-2.3.1_r1	Gingerbread	Nexus S
-			GRH55	android-2.3_r1	Gingerbread	earliest Gingerbread version, Nexus S
-			FRK76C	android-2.2.3_r2	Froyo	 
-			FRK76	android-2.2.3_r1	Froyo	
-			FRG83G	android-2.2.2_r1	Froyo	Nexus One
-			FRG83D	android-2.2.1_r2	Froyo	Nexus One
-			FRG83	android-2.2.1_r1	Froyo	Nexus One
-			FRG22D	android-2.2_r1.3	Froyo	
-			FRG01B	android-2.2_r1.2	Froyo	
-			FRF91	android-2.2_r1.1	Froyo	Nexus One
-			FRF85B	android-2.2_r1	Froyo	Nexus One
-			EPF21B	android-2.1_r2.1p2	Eclair	 
-			ESE81	android-2.1_r2.1s	Eclair	
-			EPE54B	android-2.1_r2.1p	Eclair	Nexus One
-			ERE27	android-2.1_r2	Eclair	Nexus One
-			ERD79	android-2.1_r1	Eclair	Nexus One
-			ESD56	android-2.0.1_r1	Eclair	
-			ESD20	android-2.0_r1	Eclair	 
-			DMD64	android-1.6_r1.5	Donut	 
-			DRD20	android-1.6_r1.4		
-			DRD08	android-1.6_r1.3		
-			DRC92	android-1.6_r1.2		
-		*/
+		#Build	Branch	Version	Supported devices
+		#LRX22C	android-5.0.1_r1	Lollipop	Nexus 4, Nexus 5, Nexus 6 (shamu), Nexus 7 (flo), Nexus 9 (volantis/volantisg), Nexus 10
+		#LRX21V	android-5.0.0_r7.0.1	Lollipop	Nexus Player (fugu)
+		#LRX21T	android-5.0.0_r6.0.1	Lollipop	Nexus 4
+		#LRX21R	android-5.0.0_r5.1.0.1	Lollipop	Nexus 9 (volantis)
+		#LRX21Q	android-5.0.0_r5.0.1	Lollipop	Nexus 9 (volantis)
+		#LRX21P	android-5.0.0_r4.0.1	Lollipop	Nexus 7 (flo/grouper), Nexus 10
+		#LRX21O	android-5.0.0_r3.0.1	Lollipop	Nexus 5 (hammerhead), Nexus 6 (shamu)
+		#LRX21M	android-5.0.0_r2.0.1	Lollipop	Nexus Player (fugu)
+		#LRX21L	android-5.0.0_r1.0.1	Lollipop	Nexus 9 (volantis)
+		#KTU84Q	android-4.4.4_r2	KitKat	Nexus 5 (hammerhead) (For 2Degrees/NZ, Telstra/AUS and India ONLY)
+		#KTU84P	android-4.4.4_r1	KitKat	Nexus 5, Nexus 7 (flo/deb/grouper/tilapia), Nexus 4, Nexus 10
+		#KTU84M	android-4.4.3_r1.1	KitKat	Nexus 5 (hammerhead)
+		#KTU84L	android-4.4.3_r1	KitKat	Nexus 7 (flo/deb/grouper/tilapia), Nexus 4, Nexus 10
+		#KVT49L	android-4.4.2_r2	KitKat	Nexus 7 (deb Verizon)
+		#KOT49H	android-4.4.2_r1	KitKat	Nexus 5, Nexus 7 (flo/deb/grouper/tilapia), Nexus 4, Nexus 10
+		#KOT49E	android-4.4.1_r1	KitKat	Nexus 5, Nexus 7 (flo/deb/grouper/tilapia), Nexus 4, Nexus 10
+		#KRT16S	android-4.4_r1.2	KitKat	Nexus 7 (flo/deb/grouper/tilapia), Nexus 4, Nexus 10
+		#KRT16M	android-4.4_r1	KitKat	Nexus 5 (hammerhead)
+		#JLS36I	android-4.3.1_r1	Jelly Bean	Nexus 7 (deb)
+		#JLS36C	android-4.3_r3	Jelly Bean	Nexus 7 (deb)
+		#JSS15R	android-4.3_r2.3	Jelly Bean	Nexus 7 (flo)
+		#JSS15Q	android-4.3_r2.2	Jelly Bean	Nexus 7 (flo)
+		#JSS15J	android-4.3_r2.1	Jelly Bean	Nexus 7 (flo/deb)
+		#JSR78D	android-4.3_r2	Jelly Bean	Nexus 7 (deb)
+		#JWR66Y	android-4.3_r1.1	Jelly Bean	Galaxy Nexus, Nexus 7 (grouper/tilapia), Nexus 4, Nexus 10
+		#JWR66V	android-4.3_r1	Jelly Bean	Galaxy Nexus, Nexus 7 (grouper/tilapia), Nexus 4, Nexus 10
+		#JWR66N	android-4.3_r0.9.1	Jelly Bean	Galaxy Nexus, Nexus 7 (grouper/tilapia/flo), Nexus 4, Nexus 10
+		#JWR66L	android-4.3_r0.9	Jelly Bean	Nexus 7
+		#JDQ39E	android-4.2.2_r1.2	Jelly Bean	Nexus 4
+		#JDQ39B	android-4.2.2_r1.1	Jelly Bean	Nexus 7
+		#JDQ39	android-4.2.2_r1	Jelly Bean	Galaxy Nexus, Nexus 7, Nexus 4, Nexus 10
+		#JOP40G	android-4.2.1_r1.2	Jelly Bean	Nexus 4
+		#JOP40F	android-4.2.1_r1.1	Jelly Bean	Nexus 10
+		#JOP40D	android-4.2.1_r1	Jelly Bean	Galaxy Nexus, Nexus 7, Nexus 4, Nexus 10
+		#JOP40C	android-4.2_r1	Jelly Bean	Galaxy Nexus, Nexus 7, Nexus 4, Nexus 10
+		#JZO54M	android-4.1.2_r2.1	Jelly Bean	
+		#JZO54L	android-4.1.2_r2	Jelly Bean	
+		#JZO54K	android-4.1.2_r1	Jelly Bean	Nexus S, Galaxy Nexus, Nexus 7
+		#JRO03S	android-4.1.1_r6.1	Jelly Bean	Nexus 7
+		#JRO03R	android-4.1.1_r6	Jelly Bean	Nexus S 4G
+		#JRO03O	android-4.1.1_r5	Jelly Bean	Galaxy Nexus
+		#JRO03L	android-4.1.1_r4	Jelly Bean	Nexus S
+		#JRO03H	android-4.1.1_r3	Jelly Bean	
+		#JRO03E	android-4.1.1_r2	Jelly Bean	Nexus S
+		#JRO03D	android-4.1.1_r1.1	Jelly Bean	Nexus 7
+		#JRO03C	android-4.1.1_r1	Jelly Bean	Galaxy Nexus
+		#IMM76L	android-4.0.4_r2.1	Ice Cream Sandwich	 
+		#IMM76K	android-4.0.4_r2	Ice Cream Sandwich	Galaxy Nexus
+		#IMM76I	android-4.0.4_r1.2	Ice Cream Sandwich	Galaxy Nexus
+		#IMM76D	android-4.0.4_r1.1	Ice Cream Sandwich	Nexus S, Nexus S 4G, Galaxy Nexus
+		#IMM76	android-4.0.4_r1	Ice Cream Sandwich	
+		#IML77	android-4.0.3_r1.1	Ice Cream Sandwich	
+		#IML74K	android-4.0.3_r1	Ice Cream Sandwich	Nexus S
+		#ICL53F	android-4.0.2_r1	Ice Cream Sandwich	Galaxy Nexus
+		#ITL41F	android-4.0.1_r1.2	Ice Cream Sandwich	Galaxy Nexus
+		#ITL41D	android-4.0.1_r1.1	Ice Cream Sandwich	Galaxy Nexus
+		#ITL41D	android-4.0.1_r1	Ice Cream Sandwich	Galaxy Nexus
+		#GWK74	android-2.3.7_r1	Gingerbread	Nexus S 4G
+		#GRK39F	android-2.3.6_r1	Gingerbread	Nexus One, Nexus S
+		#GRK39C	android-2.3.6_r0.9	Gingerbread	Nexus S
+		#GRJ90	android-2.3.5_r1	Gingerbread	Nexus S 4G
+		#GRJ22	android-2.3.4_r1	Gingerbread	Nexus One, Nexus S, Nexus S 4G
+		#GRJ06D	android-2.3.4_r0.9	Gingerbread	Nexus S 4G
+		#GRI54	android-2.3.3_r1.1	Gingerbread	Nexus S
+		#GRI40	android-2.3.3_r1	Gingerbread	Nexus One, Nexus S
+		#GRH78C	android-2.3.2_r1	Gingerbread	Nexus S
+		#GRH78	android-2.3.1_r1	Gingerbread	Nexus S
+		#GRH55	android-2.3_r1	Gingerbread	earliest Gingerbread version, Nexus S
+		#FRK76C	android-2.2.3_r2	Froyo	 
+		#FRK76	android-2.2.3_r1	Froyo	
+		#FRG83G	android-2.2.2_r1	Froyo	Nexus One
+		#FRG83D	android-2.2.1_r2	Froyo	Nexus One
+		#FRG83	android-2.2.1_r1	Froyo	Nexus One
+		#FRG22D	android-2.2_r1.3	Froyo	
+		#FRG01B	android-2.2_r1.2	Froyo	
+		#FRF91	android-2.2_r1.1	Froyo	Nexus One
+		#FRF85B	android-2.2_r1	Froyo	Nexus One
+		#EPF21B	android-2.1_r2.1p2	Eclair	 
+		#ESE81	android-2.1_r2.1s	Eclair	
+		#EPE54B	android-2.1_r2.1p	Eclair	Nexus One
+		#ERE27	android-2.1_r2	Eclair	Nexus One
+		#ERD79	android-2.1_r1	Eclair	Nexus One
+		#ESD56	android-2.0.1_r1	Eclair	
+		#ESD20	android-2.0_r1	Eclair	 
+		#DMD64	android-1.6_r1.5	Donut	 
+		#DRD20	android-1.6_r1.4		
+		#DRD08	android-1.6_r1.3		
+		#DRC92	android-1.6_r1.2				
 		mkdir ~/bin
 		PATH=~/bin:$PATH
 		curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
