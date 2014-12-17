@@ -11,7 +11,7 @@ else
 				The master branch of Android in the Android Open Source Project (AOSP) requires Java 7. On Ubuntu, use OpenJDK.
 				Java 7: For the latest version of Android"
 		sudo apt-get update
-		sudo apt-get install oracle-java7-installer
+		sudo apt-get install openjdk-7-jdk
 		echo "Optionally, update the default Java version by running:"
 		sudo update-alternatives --config java
 		sudo update-alternatives --config javac
