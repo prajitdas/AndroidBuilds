@@ -58,15 +58,15 @@ dirnames = ["hammerhead-krt16m","hammerhead-kot49h","hammerhead-ktu84m","hammerh
 
 def make_sure_path_exists(path):
 	try:
-		os.makedirs("binaries/"+path)
+		os.makedirs("../binaries/"+path)
 	except OSError as exception:
 		if exception.errno != errno.EEXIST:
 			raise
 
 def deleteFolders():
 	for dir in dirnames:
-		if os.path.exists("binaries"):
-			shutil.rmtree("binaries")
+		if os.path.exists("../binaries"):
+			shutil.rmtree("../binaries")
 
 def downloadVendorBinaries():
 	'''
@@ -82,7 +82,7 @@ def downloadVendorBinaries():
 			splitFilename = url.split("aosp/")
 			filename= splitFilename[1]
 			make_sure_path_exists(dirnames[listCounter])
-			output = open("binaries/"+dirnames[listCounter]+"/"+filename,'w')
+			output = open("../binaries/"+dirnames[listCounter]+"/"+filename,'w')
 			output.write(binaryFile.read())
 			output.close()
 		listCounter = listCounter + 1
