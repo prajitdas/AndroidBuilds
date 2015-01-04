@@ -88,8 +88,8 @@ def downloadVendorBinaries():
 		listCounter = listCounter + 1
 
 def main(argv):
-	if len(sys.argv) < 2:
-		sys.stderr.write('Usage: sys.argv[0]')
+	if len(sys.argv) != 2:
+		sys.stderr.write('Usage: python downloadVendorBinaries.py [dl|clear]\n')
 		sys.exit(1)
 		
 	if sys.argv[1] == "clear":
