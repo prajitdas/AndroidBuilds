@@ -89,8 +89,8 @@ else
 				When building Ice Cream Sandwich (4.0.x) or older, ccache is in a different location:
 				This setting is stored in the CCACHE_DIR and is persistent."
 		export USE_CCACHE=1
-		mkdir -p ~/workingFolder/AndroidBuilds/builds/$2/ccache
-		export CCACHE_DIR=~/workingFolder/AndroidBuilds/builds/$2/ccache
+		mkdir -p ../builds/$2/ccache
+		export CCACHE_DIR=../builds/$2/ccache
 		prebuilts/misc/linux-x86/ccache/ccache -M 50G
 		
 		#echo "	Using a separate output directory
@@ -199,7 +199,7 @@ else
 		PATH=~/bin:$PATH
 		curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 		chmod a+x ~/bin/repo
-		cd ~/workingFolder/AndroidBuilds/builds/$2
+		cd ../builds/$2
 		repo init -u https://android.googlesource.com/platform/manifest -b $2
 		repo sync
 
