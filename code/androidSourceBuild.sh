@@ -1,6 +1,7 @@
 #!/bin/bash
 if [ -z $1 ]; then
-	echo "Usage: ./androidSourceBuild.sh $userId $androidBuildBranchInfo\nWe need the user id for setting the permissions."
+	echo "Usage: ./androidSourceBuild.sh userId androidBuildBranchInfo"
+	echo "We need the user id for setting the permissions."
 else
 	if [ -z $2 ]; then
 		echo "We need the branch info"
