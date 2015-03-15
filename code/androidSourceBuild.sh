@@ -105,6 +105,8 @@ else
 		
 		#Downloading the source
 		#Build	Branch	Version	Supported devices
+		#LMY47D	android-5.1.0_r1	Lollipop	Nexus 5, Nexus 6, Nexus 7 (grouper), Nexus 10
+		#LRX22G	android-5.0.2_r1	Lollipop	Nexus 7 (flo/deb/grouper/tilapia), Nexus 10
 		#LRX22C	android-5.0.1_r1	Lollipop	Nexus 4, Nexus 5, Nexus 6 (shamu), Nexus 7 (flo), Nexus 9 (volantis/volantisg), Nexus 10
 		#LRX21V	android-5.0.0_r7.0.1	Lollipop	Nexus Player (fugu)
 		#LRX21T	android-5.0.0_r6.0.1	Lollipop	Nexus 4
