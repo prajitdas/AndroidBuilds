@@ -4,7 +4,7 @@ if [ -z $1 ]; then
 	echo "We need the user id for setting the permissions."
 else
 	if [ -z $2 ]; then
-		echo "We need the branch info"
+		echo "We need the branch info. Is it 'android-4.0.1_r1' or something else?"
 	else
 		release=`lsb_release -a | grep Release | cut -f2 -d ":" | tr -d '\t'`
 		echo "	Initializing Build Environment
