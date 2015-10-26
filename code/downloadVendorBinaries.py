@@ -84,9 +84,6 @@ GLOBAL DIRNAME VARIABLE
 The part that we extract as the directory name is in the file name.
 For example for broadcom-hammerhead-krt16m-bf9b8548.tgz the directory name is hammerhead-krt16m.
 '''
-
-dirnames = ["hammerhead-krt16m","hammerhead-kot49h","hammerhead-ktu84m","hammerhead-ktu84p","hammerhead-lrx21O","hammerhead-lrx22c","hammerhead-lmy47i","hammerhead-lmy48m","hammerhead-mra58k","mako-krt16s","mako-kot49h","mako-ktu84l","mako-ktu84p"]
-
 def make_sure_path_exists(path):
 	try:
 		os.makedirs("../binaries/"+path)
@@ -94,12 +91,12 @@ def make_sure_path_exists(path):
 		if exception.errno != errno.EEXIST:
 			raise
 
-def deleteFolders():
+def deleteFolders(dirnames):
 	for dir in dirnames:
 		if os.path.exists("../binaries"):
 			shutil.rmtree("../binaries")
 
-def downloadVendorBinaries():
+def downloadVendorBinaries(dirnames):
 	'''
 	Put all the vendor binary URLS in the following variable.
 	The binaries can be obtained from this link: https://developers.google.com/android/nexus/drivers
@@ -123,10 +120,11 @@ def main(argv):
 		sys.stderr.write('Usage: python downloadVendorBinaries.py [dl|clear]\n')
 		sys.exit(1)
 		
+	dirnames = ["hammerhead-krt16m","hammerhead-kot49h","hammerhead-ktu84m","hammerhead-ktu84p","hammerhead-lrx21O","hammerhead-lrx22c","hammerhead-lmy47i","hammerhead-lmy48m","hammerhead-mra58k","mako-krt16s","mako-kot49h","mako-ktu84l","mako-ktu84p"]
 	if sys.argv[1] == "clear":
-		deleteFolders()
+		deleteFolders(dirnames)
 	elif sys.argv[1] == "dl":
-		downloadVendorBinaries()
+		downloadVendorBinaries(dirnames)
 
 if __name__ == "__main__":
 	sys.exit(main(sys.argv))
