@@ -109,6 +109,15 @@ else
 		
 		# Downloading the source
 		# Build	Branch	Version	Supported devices
+		# MDB08M	android-6.0.0_r26	Marshmallow	Nexus 5X, Nexus 6P
+		# MDB08L	android-6.0.0_r25	Marshmallow	Nexus 5X, Nexus 6P
+		# MDB08K	android-6.0.0_r24	Marshmallow	Nexus 6P
+		# MDB08I	android-6.0.0_r23	Marshmallow	Nexus 5X
+		# MDA89E	android-6.0.0_r12	Marshmallow	Nexus 5X
+		# MDA89D	android-6.0.0_r11	Marshmallow	Nexus 6P
+		# MRA58V	android-6.0.0_r5	Marshmallow	Nexus 7 (flo/deb)
+		# MRA58U	android-6.0.0_r4	Marshmallow	Nexus 7 (flo)
+		# MRA58N	android-6.0.0_r2	Marshmallow	Nexus 5, Nexus 6, Nexus 7 (flo/deb), Nexus 9 (volantis/volantisg), Nexus Player
 		# MRA58K	android-6.0.0_r1	Marshmallow	Nexus 5, Nexus 6, Nexus 7 (flo/deb), Nexus 9 (volantis/volantisg), Nexus Player
 		# LMY48W	android-5.1.1_r24	Lollipop	Nexus 6
 		# LVY48H	android-5.1.1_r23	Lollipop	Nexus 6 (For Project Fi ONLY)
