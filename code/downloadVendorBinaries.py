@@ -148,22 +148,20 @@ def downloadVendorBinaries():
 	Put all the vendor binary URLS in the following variable.
 	The binaries can be obtained from this link: https://developers.google.com/android/nexus/drivers
 	'''
-	with open('urls.json') as urlsFile:
-		urls = json.load(urlsFile)
-
-	print urls
-	for url in urls:
+	with open('urls.json') as data_file:
+		urls = json.load(data_file)
+	
+	for url in urls['urls']:
 		filename = url.split("aosp/")[1]
 		folderName = "../binaries/"+filename.split("-")[1]+"-"+filename.split("-")[2]
+		make_sure_path_exists(folderName)
 
 		print "Downloading url: " + url
-		# binaryFile = urllib2.urlopen(url)
+		binaryFile = urllib2.urlopen(url)
 
-		make_sure_path_exists(folderName)
 		fileLocation = folderName+"/"+filename
-		print fileLocation
 		output = open(fileLocation,'w')
-		# output.write(binaryFile.read())
+		output.write(binaryFile.read())
 		output.close()
 
 def main(argv):
