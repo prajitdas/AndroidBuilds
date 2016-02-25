@@ -152,6 +152,7 @@ def downloadVendorBinaries(dirnames):
 	listCounter = 0
 	for urls in urllists:
 		for url in urls:
+			print "Downloading url: "+url
 			binaryFile = urllib2.urlopen(url)
 			splitFilename = url.split("aosp/")
 			filename= splitFilename[1]
