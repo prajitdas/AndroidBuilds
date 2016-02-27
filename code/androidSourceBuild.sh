@@ -109,6 +109,19 @@ else
 		
 		# Downloading the source
 		# Build	Branch	Version	Supported devices
+		# MXB48T	android-6.0.1_r16	Marshmallow	Pixel C
+		# MMB29U	android-6.0.1_r13	Marshmallow	Nexus Player
+		# MMB29R	android-6.0.1_r12	Marshmallow	Nexus 9 (volantis/volantisg)
+		# MMB29Q	android-6.0.1_r11	Marshmallow	Nexus 5, Nexus 5X, Nexus 6, Nexus 6P, Nexus 7 (flo/deb)
+		# MMB29T	android-6.0.1_r10	Marshmallow	Nexus Player
+		# MMB29S	android-6.0.1_r9	Marshmallow	Nexus 5, Nexus 6, Nexus 9 (volantis/volantisg)
+		# MMB29P	android-6.0.1_r8	Marshmallow	Nexus 5X, Nexus 6P
+		# MMB29O	android-6.0.1_r7	Marshmallow	Nexus 7 (flo/deb)
+		# MXB48K	android-6.0.1_r5	Marshmallow	Pixel C
+		# MXB48J	android-6.0.1_r4	Marshmallow	Pixel C
+		# MMB29M	android-6.0.1_r3	Marshmallow	Nexus 6P, Nexus Player
+		# MMB29K	android-6.0.1_r1	Marshmallow	Nexus 5, Nexus 5X, Nexus 6, Nexus 7 (flo/deb), Nexus 9 (volantis/volantisg)
+		# MMB29N	android-6.0.0_r41	Marshmallow	Nexus 6P
 		# MDB08M	android-6.0.0_r26	Marshmallow	Nexus 5X, Nexus 6P
 		# MDB08L	android-6.0.0_r25	Marshmallow	Nexus 5X, Nexus 6P
 		# MDB08K	android-6.0.0_r24	Marshmallow	Nexus 6P
