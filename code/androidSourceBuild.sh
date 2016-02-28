@@ -96,6 +96,7 @@ else
 		#		This is only supported on Jelly Bean (4.1) and newer, including the master branch."
 		# export OUT_DIR_COMMON_BASE=~/workingFolder/AndroidBuilds/builds/$2/out
 		
+		# For build tags llok at https://source.android.com/source/build-numbers.html
 		# Downloading the source
 		# Build	Branch	Version	Supported devices
 		# MXB48T	android-6.0.1_r16	Marshmallow	Pixel C
