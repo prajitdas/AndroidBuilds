@@ -99,6 +99,9 @@ else
 		# For build tags llok at https://source.android.com/source/build-numbers.html
 		# Downloading the source
 		# Build	Branch	Version	Supported devices
+		# MHC19J	android-6.0.1_r22	Marshmallow	Nexus 5X
+		# MXC14G	android-6.0.1_r18	Marshmallow	Pixel C
+		# MMB29V	android-6.0.1_r17	Marshmallow	Nexus 5, Nexus 5X, Nexus 6, Nexus 6P, Nexus 7 (flo/deb), Nexus 9 (volantis/volantisg)
 		# MXB48T	android-6.0.1_r16	Marshmallow	Pixel C
 		# MMB29U	android-6.0.1_r13	Marshmallow	Nexus Player
 		# MMB29R	android-6.0.1_r12	Marshmallow	Nexus 9 (volantis/volantisg)
