@@ -18,9 +18,6 @@ import sys
 import json
 from bs4 import BeautifulSoup
 import urllib2
-import time
-import logging
-logging.basicConfig(filename='downloadVendorBinaries.log',level=logging.DEBUG)
 
 def make_sure_path_exists(path):
 	if not os.path.exists(path):
