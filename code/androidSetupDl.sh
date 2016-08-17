@@ -5,6 +5,7 @@ if [ -z $1 ]; then
 else
 	if [ -z $2 ]; then
 		echo "We need the branch info. Is it 'android-4.0.1_r1' or something else?"
+	else
 		if [ -z $3 ]; then
 			echo "We need the device info. Is it 'hammerhead' or something else?"
 		else
