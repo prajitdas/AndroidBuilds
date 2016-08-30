@@ -53,42 +53,8 @@ else
 			echo "	Configuring USB Access
 					Under GNU/linux systems (and specifically under Ubuntu systems), regular users can't directly access USB devices by default. The system needs to be configured to allow such access.
 					The recommended approach is to create a file /etc/udev/rules.d/51-android.rules (as the root user) and to copy the following lines in it. <username> must be replaced by the actual username of the user who is authorized to access the phones over USB."
-			sudo echo '# adb protocol on passion (Nexus One)
-			SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e12", MODE="0600", OWNER="$1"
-			# fastboot protocol on passion (Nexus One)
-			SUBSYSTEM=="usb", ATTR{idVendor}=="0bb4", ATTR{idProduct}=="0fff", MODE="0600", OWNER="$1"
-			# adb protocol on crespo/crespo4g (Nexus S)
-			SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e22", MODE="0600", OWNER="$1"
-			# fastboot protocol on crespo/crespo4g (Nexus S)
-			SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e20", MODE="0600", OWNER="$1"
-			# adb protocol on stingray/wingray (Xoom)
-			SUBSYSTEM=="usb", ATTR{idVendor}=="22b8", ATTR{idProduct}=="70a9", MODE="0600", OWNER="$1"
-			# fastboot protocol on stingray/wingray (Xoom)
-			SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="708c", MODE="0600", OWNER="$1"
-			# adb protocol on maguro/toro (Galaxy Nexus)
-			SUBSYSTEM=="usb", ATTR{idVendor}=="04e8", ATTR{idProduct}=="6860", MODE="0600", OWNER="$1"
-			# fastboot protocol on maguro/toro (Galaxy Nexus)
-			SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e30", MODE="0600", OWNER="$1"
-			# adb protocol on panda (PandaBoard)
-			SUBSYSTEM=="usb", ATTR{idVendor}=="0451", ATTR{idProduct}=="d101", MODE="0600", OWNER="$1"
-			# adb protocol on panda (PandaBoard ES)
-			SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="d002", MODE="0600", OWNER="$1"
-			# fastboot protocol on panda (PandaBoard)
-			SUBSYSTEM=="usb", ATTR{idVendor}=="0451", ATTR{idProduct}=="d022", MODE="0600", OWNER="$1"
-			# usbboot protocol on panda (PandaBoard)
-			SUBSYSTEM=="usb", ATTR{idVendor}=="0451", ATTR{idProduct}=="d00f", MODE="0600", OWNER="$1"
-			# usbboot protocol on panda (PandaBoard ES)
-			SUBSYSTEM=="usb", ATTR{idVendor}=="0451", ATTR{idProduct}=="d010", MODE="0600", OWNER="$1"
-			# adb protocol on grouper/tilapia (Nexus 7)
-			SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e42", MODE="0600", OWNER="$1"
-			# fastboot protocol on grouper/tilapia (Nexus 7)
-			SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e40", MODE="0600", OWNER="$1"
-			# adb protocol on manta (Nexus 10)
-			SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4ee2", MODE="0600", OWNER="$1"
-			# fastboot protocol on manta (Nexus 10)
-			SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4ee0", MODE="0600", OWNER="$1"' > /etc/udev/rules.d/51-android.rules
+			wget -S -O - http://source.android.com/source/51-android.rules | sed "s/<username>/$1/" | sudo tee >/dev/null /etc/udev/rules.d/51-android.rules; sudo udevadm control --reload-rules
 			sudo $1
-
 			# echo "	Using a separate output directory
 			#		By default, the output of each build is stored in the out/ subdirectory of the matching source tree.
 			#		On some machines with multiple storage devices, builds are faster when storing the source files and the output on separate volumes. For additional performance, the output can be stored on a filesystem optimized for speed instead of crash robustness, since all files can be re-generated in case of filesystem corruption.
@@ -102,6 +68,7 @@ else
 			# For build tags llok at https://source.android.com/source/build-numbers.html
 			# Downloading the source
 			# Build	Branch	Version	Supported devices
+			# NRD90M	android-7.0.0_r1	Nougat			Nexus 9 (volantis), Nexus Player, Pixel C
 			# MXC89L 	android-6.0.1_r63 	Marshmallow 	Pixel C
 			# MTC20F 	android-6.0.1_r62 	Marshmallow 	Nexus 5X, Nexus 6P
 			# MOB30Y 	android-6.0.1_r60 	Marshmallow 	Nexus 5
@@ -129,60 +96,60 @@ else
 			# M5C14J 	android-6.0.1_r31 	Marshmallow 	Pixel C
 			# MOB30D 	android-6.0.1_r30 	Marshmallow 	Nexus 5, Nexus 6, Nexus 7 (flo/deb), Nexus 9 (volantis/volantisg), Nexus Player
 			# MHC19Q 	android-6.0.1_r24 	Marshmallow 	Nexus 5X, Nexus 6P
-			# MHC19J	android-6.0.1_r22	Marshmallow	Nexus 5X
-			# MXC14G	android-6.0.1_r18	Marshmallow	Pixel C
-			# MMB29V	android-6.0.1_r17	Marshmallow	Nexus 5, Nexus 5X, Nexus 6, Nexus 6P, Nexus 7 (flo/deb), Nexus 9 (volantis/volantisg)
-			# MXB48T	android-6.0.1_r16	Marshmallow	Pixel C
-			# MMB29U	android-6.0.1_r13	Marshmallow	Nexus Player
-			# MMB29R	android-6.0.1_r12	Marshmallow	Nexus 9 (volantis/volantisg)
-			# MMB29Q	android-6.0.1_r11	Marshmallow	Nexus 5, Nexus 5X, Nexus 6, Nexus 6P, Nexus 7 (flo/deb)
-			# MMB29T	android-6.0.1_r10	Marshmallow	Nexus Player
-			# MMB29S	android-6.0.1_r9	Marshmallow	Nexus 5, Nexus 6, Nexus 9 (volantis/volantisg)
-			# MMB29P	android-6.0.1_r8	Marshmallow	Nexus 5X, Nexus 6P
-			# MMB29O	android-6.0.1_r7	Marshmallow	Nexus 7 (flo/deb)
-			# MXB48K	android-6.0.1_r5	Marshmallow	Pixel C
-			# MXB48J	android-6.0.1_r4	Marshmallow	Pixel C
-			# MMB29M	android-6.0.1_r3	Marshmallow	Nexus 6P, Nexus Player
-			# MMB29K	android-6.0.1_r1	Marshmallow	Nexus 5, Nexus 5X, Nexus 6, Nexus 7 (flo/deb), Nexus 9 (volantis/volantisg)
-			# MMB29N	android-6.0.0_r41	Marshmallow	Nexus 6P
-			# MDB08M	android-6.0.0_r26	Marshmallow	Nexus 5X, Nexus 6P
-			# MDB08L	android-6.0.0_r25	Marshmallow	Nexus 5X, Nexus 6P
-			# MDB08K	android-6.0.0_r24	Marshmallow	Nexus 6P
-			# MDB08I	android-6.0.0_r23	Marshmallow	Nexus 5X
-			# MDA89E	android-6.0.0_r12	Marshmallow	Nexus 5X
-			# MDA89D	android-6.0.0_r11	Marshmallow	Nexus 6P
-			# MRA58V	android-6.0.0_r5	Marshmallow	Nexus 7 (flo/deb)
-			# MRA58U	android-6.0.0_r4	Marshmallow	Nexus 7 (flo)
-			# MRA58N	android-6.0.0_r2	Marshmallow	Nexus 5, Nexus 6, Nexus 7 (flo/deb), Nexus 9 (volantis/volantisg), Nexus Player
-			# MRA58K	android-6.0.0_r1	Marshmallow	Nexus 5, Nexus 6, Nexus 7 (flo/deb), Nexus 9 (volantis/volantisg), Nexus Player
-			# LMY48W	android-5.1.1_r24	Lollipop	Nexus 6
-			# LVY48H	android-5.1.1_r23	Lollipop	Nexus 6 (For Project Fi ONLY)
-			# LYZ28M	android-5.1.1_r22	Lollipop	Nexus 6 (For T-Mobile ONLY)
-			# LMY48U	android-5.1.1_r20	Lollipop	Nexus 7 (deb)
-			# LMY48T	android-5.1.1_r19	Lollipop	Nexus 4, Nexus 6, Nexus 9 (volantis/volantisg), Nexus 10
-			# LVY48F	android-5.1.1_r18	Lollipop	Nexus 6 (For Project Fi ONLY)
-			# LYZ28K	android-5.1.1_r17	Lollipop	Nexus 6 (For T-Mobile ONLY)
-			# LMY48P	android-5.1.1_r16	Lollipop	Nexus 7 (deb)
-			# LMY48N	android-5.1.1_r15	Lollipop	Nexus Player
-			# LMY48M	android-5.1.1_r14	Lollipop	Nexus 4, Nexus 5, Nexus 6, Nexus 7 (flo), Nexus 9 (volantis/volantisg), Nexus 10
-			# LVY48E	android-5.1.1_r13	Lollipop	Nexus 6 (For Project Fi ONLY)
-			# LYZ28J	android-5.1.1_r12	Lollipop	Nexus 6 (For T-Mobile ONLY)
-			# LMY48J	android-5.1.1_r10	Lollipop	Nexus Player
-			# LMY48I	android-5.1.1_r9	Lollipop	Nexus 4, Nexus 5, Nexus 6, Nexus 7 (flo), Nexus 9 (volantis/volantisg), Nexus 10
-			# LVY48C	android-5.1.1_r8	Lollipop	Nexus 6 (For Project Fi ONLY)
-			# LMY48G	android-5.1.1_r6	Lollipop	Nexus 7 (flo)
-			# LYZ28E	android-5.1.1_r5	Lollipop	Nexus 6 (For T-Mobile ONLY)
-			# LMY47Z	android-5.1.1_r4	Lollipop	Nexus 6 (All carriers except T-Mobile US)
-			# LMY48B	android-5.1.1_r3	Lollipop	Nexus 5
-			# LMY47X	android-5.1.1_r2	Lollipop	Nexus 9 (volantis)
-			# LMY47V	android-5.1.1_r1	Lollipop	Nexus 7 (flo/grouper), Nexus 10, Nexus Player
-			# LMY47O	android-5.1.0_r5	Lollipop	Nexus 4, Nexus 7 (flo/deb)
-			# LMY47M	android-5.1.0_r4	Lollipop	Nexus 6 (For T-Mobile ONLY)
-			# LMY47I	android-5.1.0_r3	Lollipop	Nexus 5, Nexus 6
-			# LMY47E	android-5.1.0_r2	Lollipop	Nexus 6
-			# LMY47D	android-5.1.0_r1	Lollipop	Nexus 5, Nexus 6, Nexus 7 (grouper), Nexus 10
-			# LRX22G	android-5.0.2_r1	Lollipop	Nexus 7 (flo/deb/grouper/tilapia), Nexus 10
-			# LRX22C	android-5.0.1_r1	Lollipop	Nexus 4, Nexus 5, Nexus 6 (shamu), Nexus 7 (flo), Nexus 9 (volantis/volantisg), Nexus 10
+			# MHC19J	android-6.0.1_r22	Marshmallow		Nexus 5X
+			# MXC14G	android-6.0.1_r18	Marshmallow		Pixel C
+			# MMB29V	android-6.0.1_r17	Marshmallow		Nexus 5, Nexus 5X, Nexus 6, Nexus 6P, Nexus 7 (flo/deb), Nexus 9 (volantis/volantisg)
+			# MXB48T	android-6.0.1_r16	Marshmallow		Pixel C
+			# MMB29U	android-6.0.1_r13	Marshmallow		Nexus Player
+			# MMB29R	android-6.0.1_r12	Marshmallow		Nexus 9 (volantis/volantisg)
+			# MMB29Q	android-6.0.1_r11	Marshmallow		Nexus 5, Nexus 5X, Nexus 6, Nexus 6P, Nexus 7 (flo/deb)
+			# MMB29T	android-6.0.1_r10	Marshmallow		Nexus Player
+			# MMB29S	android-6.0.1_r9	Marshmallow		Nexus 5, Nexus 6, Nexus 9 (volantis/volantisg)
+			# MMB29P	android-6.0.1_r8	Marshmallow		Nexus 5X, Nexus 6P
+			# MMB29O	android-6.0.1_r7	Marshmallow		Nexus 7 (flo/deb)
+			# MXB48K	android-6.0.1_r5	Marshmallow		Pixel C
+			# MXB48J	android-6.0.1_r4	Marshmallow		Pixel C
+			# MMB29M	android-6.0.1_r3	Marshmallow		Nexus 6P, Nexus Player
+			# MMB29K	android-6.0.1_r1	Marshmallow		Nexus 5, Nexus 5X, Nexus 6, Nexus 7 (flo/deb), Nexus 9 (volantis/volantisg)
+			# MMB29N	android-6.0.0_r41	Marshmallow		Nexus 6P
+			# MDB08M	android-6.0.0_r26	Marshmallow		Nexus 5X, Nexus 6P
+			# MDB08L	android-6.0.0_r25	Marshmallow		Nexus 5X, Nexus 6P
+			# MDB08K	android-6.0.0_r24	Marshmallow		Nexus 6P
+			# MDB08I	android-6.0.0_r23	Marshmallow		Nexus 5X
+			# MDA89E	android-6.0.0_r12	Marshmallow		Nexus 5X
+			# MDA89D	android-6.0.0_r11	Marshmallow		Nexus 6P
+			# MRA58V	android-6.0.0_r5	Marshmallow		Nexus 7 (flo/deb)
+			# MRA58U	android-6.0.0_r4	Marshmallow		Nexus 7 (flo)
+			# MRA58N	android-6.0.0_r2	Marshmallow		Nexus 5, Nexus 6, Nexus 7 (flo/deb), Nexus 9 (volantis/volantisg), Nexus Player
+			# MRA58K	android-6.0.0_r1	Marshmallow		Nexus 5, Nexus 6, Nexus 7 (flo/deb), Nexus 9 (volantis/volantisg), Nexus Player
+			# LMY48W	android-5.1.1_r24	Lollipop		Nexus 6
+			# LVY48H	android-5.1.1_r23	Lollipop		Nexus 6 (For Project Fi ONLY)
+			# LYZ28M	android-5.1.1_r22	Lollipop		Nexus 6 (For T-Mobile ONLY)
+			# LMY48U	android-5.1.1_r20	Lollipop		Nexus 7 (deb)
+			# LMY48T	android-5.1.1_r19	Lollipop		Nexus 4, Nexus 6, Nexus 9 (volantis/volantisg), Nexus 10
+			# LVY48F	android-5.1.1_r18	Lollipop		Nexus 6 (For Project Fi ONLY)
+			# LYZ28K	android-5.1.1_r17	Lollipop		Nexus 6 (For T-Mobile ONLY)
+			# LMY48P	android-5.1.1_r16	Lollipop		Nexus 7 (deb)
+			# LMY48N	android-5.1.1_r15	Lollipop		Nexus Player
+			# LMY48M	android-5.1.1_r14	Lollipop		Nexus 4, Nexus 5, Nexus 6, Nexus 7 (flo), Nexus 9 (volantis/volantisg), Nexus 10
+			# LVY48E	android-5.1.1_r13	Lollipop		Nexus 6 (For Project Fi ONLY)
+			# LYZ28J	android-5.1.1_r12	Lollipop		Nexus 6 (For T-Mobile ONLY)
+			# LMY48J	android-5.1.1_r10	Lollipop		Nexus Player
+			# LMY48I	android-5.1.1_r9	Lollipop		Nexus 4, Nexus 5, Nexus 6, Nexus 7 (flo), Nexus 9 (volantis/volantisg), Nexus 10
+			# LVY48C	android-5.1.1_r8	Lollipop		Nexus 6 (For Project Fi ONLY)
+			# LMY48G	android-5.1.1_r6	Lollipop		Nexus 7 (flo)
+			# LYZ28E	android-5.1.1_r5	Lollipop		Nexus 6 (For T-Mobile ONLY)
+			# LMY47Z	android-5.1.1_r4	Lollipop		Nexus 6 (All carriers except T-Mobile US)
+			# LMY48B	android-5.1.1_r3	Lollipop		Nexus 5
+			# LMY47X	android-5.1.1_r2	Lollipop		Nexus 9 (volantis)
+			# LMY47V	android-5.1.1_r1	Lollipop		Nexus 7 (flo/grouper), Nexus 10, Nexus Player
+			# LMY47O	android-5.1.0_r5	Lollipop		Nexus 4, Nexus 7 (flo/deb)
+			# LMY47M	android-5.1.0_r4	Lollipop		Nexus 6 (For T-Mobile ONLY)
+			# LMY47I	android-5.1.0_r3	Lollipop		Nexus 5, Nexus 6
+			# LMY47E	android-5.1.0_r2	Lollipop		Nexus 6
+			# LMY47D	android-5.1.0_r1	Lollipop		Nexus 5, Nexus 6, Nexus 7 (grouper), Nexus 10
+			# LRX22G	android-5.0.2_r1	Lollipop		Nexus 7 (flo/deb/grouper/tilapia), Nexus 10
+			# LRX22C	android-5.0.1_r1	Lollipop		Nexus 4, Nexus 5, Nexus 6 (shamu), Nexus 7 (flo), Nexus 9 (volantis/volantisg), Nexus 10
 			# LRX21V	android-5.0.0_r7.0.1	Lollipop	Nexus Player (fugu)
 			# LRX21T	android-5.0.0_r6.0.1	Lollipop	Nexus 4
 			# LRX21R	android-5.0.0_r5.1.0.1	Lollipop	Nexus 9 (volantis)
