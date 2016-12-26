@@ -67,9 +67,9 @@ def main(argv):
 	deviceId = sys.argv[1]
 	
 	'''
-	The binaries can be obtained from this link: https://developers.google.com/android/nexus/drivers
+	The binaries can be obtained from this link: https://developers.google.com/android/drivers
 	'''
-	extractBinaryUrls('https://developers.google.com/android/nexus/drivers')
+	extractBinaryUrls('https://developers.google.com/android/drivers')
 	
 	downloadVendorBinaries(deviceId)
 
