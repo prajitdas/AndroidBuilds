@@ -1,5 +1,6 @@
 #!/bin/bash
 if [ -z $1 ]; then
+	echo "Usage: ./install-device-sysimage.sh deviceInfo"
 	echo "device id? 'hammerhead'?"
 else
 	#Measure execution time
