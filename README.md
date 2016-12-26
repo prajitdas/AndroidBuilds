@@ -30,7 +30,7 @@ The scripts and steps listed will require your username, Android branch that you
 4. Build the image for a particular device.
 
   ```{r, engine='bash', count_lines}
-    bash code/build-for-device-aosp.sh userId androidBuildBranchInfo deviceInfo
+    bash code/build-for-device-aosp.sh username androidBuildBranchInfo deviceInfo
   ```
 
 5. Install image on device.
