@@ -1,9 +1,9 @@
 '''
-last-edit-date: 08/15/2016
-Version: 1.1
+last-edit-date: 12/26/2016
+Version: 1.2
 @author: Prajit Kumar Das
 @coAuthor: Abhay Kashyap
-Usage: python downloadVendorBinaries.py deviceId(for example hammerhead, bullhead)
+Usage: python downloadVendorBinaries.py deviceInfo(for example hammerhead, bullhead)
 Email: prajitdas AT gmail DOT com
 Purpose: This program will download all vendor dependencies for building device specific Android ROMs
 -----------------------
@@ -23,7 +23,7 @@ def make_sure_path_exists(path):
 	if not os.path.exists(path):
 		os.makedirs(path)
 
-def downloadVendorBinaries(deviceId):
+def downloadVendorBinaries(deviceInfo):
 	'''
 	Put all the vendor binary URLS in the following variable.
 	'''
@@ -31,7 +31,7 @@ def downloadVendorBinaries(deviceId):
 		urls = json.load(data_file)
 	
 	for url in urls['urls']:
-		if deviceId in url:
+		if deviceInfo in url:
 			filename = url.split('aosp/')[1]
 			folderName = '../binaries/'+filename.split('-')[1]+'-'+filename.split('-')[2]
 			make_sure_path_exists(folderName)
@@ -61,17 +61,17 @@ def extractBinaryUrls(binaryUrl):
 
 def main(argv):
 	if len(sys.argv) != 2:
-		sys.stderr.write('Usage: python downloadVendorBinaries.py deviceId\n')
+		sys.stderr.write('Usage: python downloadVendorBinaries.py deviceInfo\n')
 		sys.exit(1)
 		
-	deviceId = sys.argv[1]
+	deviceInfo = sys.argv[1]
 	
 	'''
 	The binaries can be obtained from this link: https://developers.google.com/android/drivers
 	'''
 	extractBinaryUrls('https://developers.google.com/android/drivers')
 	
-	downloadVendorBinaries(deviceId)
+	downloadVendorBinaries(deviceInfo)
 
 if __name__ == '__main__':
 	sys.exit(main(sys.argv))
