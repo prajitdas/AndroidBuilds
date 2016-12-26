@@ -68,8 +68,41 @@ else
 			# For build tags llok at https://source.android.com/source/build-numbers.html
 			# Downloading the source
 			# Build	Branch	Version	Supported devices
-			# NRD90M	android-7.0.0_r1	Nougat			Nexus 9 (volantis), Nexus Player, Pixel C
-			# MXC89L 	android-6.0.1_r63 	Marshmallow 	Pixel C
+			# NMF26Q	android-7.1.1_r6	Nougat	Pixel XL, Pixel
+			# NMF26O	android-7.1.1_r4	Nougat	Pixel XL, Pixel
+			# NMF26J	android-7.1.1_r3	Nougat	Nexus Player
+			# NMF26H	android-7.1.1_r2	Nougat	Pixel C
+			# NMF26F	android-7.1.1_r1	Nougat	Nexus 5X, Nexus 6P, Nexus 9 (volantis/volantisg)
+			# NDE63X	android-7.1.0_r7	Nougat	Pixel XL, Pixel
+			# NDE63V	android-7.1.0_r6	Nougat	Pixel XL, Pixel
+			# NDE63U	android-7.1.0_r5	Nougat	Pixel XL, Pixel
+			# NDE63P	android-7.1.0_r4	Nougat	Pixel XL, Pixel
+			# NDE63L	android-7.1.0_r2	Nougat	Pixel XL, Pixel
+			# NDE63H	android-7.1.0_r1	Nougat	Pixel XL, Pixel
+			# NBD91U	android-7.0.0_r24	Nougat	Nexus 6
+			# N5D91L	android-7.0.0_r21	Nougat	Nexus 5X
+			# NBD91P	android-7.0.0_r19	Nougat	Nexus 6
+			# NRD91K	android-7.0.0_r17	Nougat	Nexus 6P
+			# NRD91N	android-7.0.0_r15	Nougat	Nexus 5X, Pixel C, Nexus Player, Nexus 9 (volantis/volantisg)
+			# NBD90Z	android-7.0.0_r14	Nougat	Nexus 6
+			# NBD90X	android-7.0.0_r13	Nougat	Nexus 6P
+			# NBD90W	android-7.0.0_r12	Nougat	Nexus 5X
+			# NRD91D	android-7.0.0_r7	Nougat	Pixel C, Nexus Player, Nexus 9 (Wi-Fi)
+			# NRD90U	android-7.0.0_r6	Nougat	Nexus 6P
+			# NRD90T	android-7.0.0_r5	Nougat	Nexus 6P
+			# NRD90S	android-7.0.0_r4	Nougat	Nexus 5X
+			# NRD90R	android-7.0.0_r3	Nougat	Nexus 5X, Nexus 9 (volantis), Nexus Player, Pixel C
+			# NRD90M	android-7.0.0_r1	Nougat	Nexus 5X, Nexus 9 (volantis), Nexus Player, Pixel C
+			# M4B30Z	android-6.0.1_r77	Marshmallow	Nexus 5
+			# MOB31K	android-6.0.1_r74	Marshmallow	Nexus 6
+			# MMB31C	android-6.0.1_r73	Marshmallow	Nexus 6
+			# M4B30X	android-6.0.1_r72	Marshmallow	Nexus 5
+			# MOB31H	android-6.0.1_r70	Marshmallow	Nexus 6
+			# MMB30Y	android-6.0.1_r69	Marshmallow	Nexus 6
+			# MTC20K	android-6.0.1_r67	Marshmallow	Nexus 5X
+			# MOB31E	android-6.0.1_r66	Marshmallow	Nexus 5, Nexus 6, Nexus 9 (volantis)
+			# MMB30W	android-6.0.1_r65	Marshmallow	Nexus 6
+			# MXC89L	android-6.0.1_r63	Marshmallow	Pixel C
 			# MTC20F 	android-6.0.1_r62 	Marshmallow 	Nexus 5X, Nexus 6P
 			# MOB30Y 	android-6.0.1_r60 	Marshmallow 	Nexus 5
 			# MOB30X 	android-6.0.1_r59 	Marshmallow 	Nexus 7 (flo/deb)
