@@ -20,10 +20,9 @@ The scripts and steps listed will require device info, i.e. 'hammerhead'.
 
 3. Install image on device.
 
-The two files we’re interested in are:
-
-`recovery.img`, which is the LineageOS recovery image.
-`lineage-14.1-20170213-UNOFFICIAL-mako.zip`, which is the LineageOS installer package.
+   The two files we’re interested in are:
+   * `recovery.img`, which is the LineageOS recovery image.
+   * `lineage-14.1-20170213-UNOFFICIAL-mako.zip`, which is the LineageOS installer package.
 
   ```{r, engine='bash', count_lines}
     cd $OUT
