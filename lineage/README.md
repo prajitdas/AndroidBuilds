@@ -24,6 +24,7 @@ The scripts and steps listed will require device info, i.e. 'hammerhead'.
    * `recovery.img`, which is the LineageOS recovery image.
    * `lineage-14.1-20170213-UNOFFICIAL-mako.zip`, which is the LineageOS installer package.
 
+  Go to the OUT folder as shown below and push the files on to your phone via connected USB and use a custom recovery like TWRP to isntall the new ROM you just built.
   ```{r, engine='bash', count_lines}
     cd $OUT
     adb push filename /sdcard/
