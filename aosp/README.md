@@ -1,6 +1,8 @@
 Android builds
 ==============
 
+This project will allow users to build custom Android ROMs. Detailed instructions from Google are available [here](https://source.android.com/source/initializing.html). 
+
 ### Run instructions
 The scripts and steps listed will require your username, Android branch that you are building, i.e. 'android-4.0.1_r1' and device info, i.e. 'hammerhead'.
 
