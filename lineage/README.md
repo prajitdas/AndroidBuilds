@@ -9,13 +9,13 @@ The scripts and steps listed will require device info, i.e. 'hammerhead'.
 1. Setup the build environment for your OS version. (This script assumes Ubuntu 16.04 LTS)
 
   ```{r, engine='bash', count_lines}
-    bash lineage/env-setup.sh
+    ./env-setup.sh
   ```
 
 2. Initiate repo for AOSP build for a particular device. 
 
   ```{r, engine='bash', count_lines}
-    bash lineage/init-lineage-device-build.sh deviceName
+    ./init-lineage-device-build.sh deviceName
   ```
 
 3. Install image on device.
