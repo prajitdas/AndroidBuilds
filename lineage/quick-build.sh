@@ -1,5 +1,5 @@
 #!/bin/bash
-# Sample quick build for hammerhead
+# Sample quick build for mako
 device=`adb devices | awk '{if($2 == "device") print $1;}' | tr -d '\n'`
 model=`adb -s $device shell getprop ro.product.model | tr -d '\n'`
 date=`date +%Y%m%d | tr -d '\n'`
