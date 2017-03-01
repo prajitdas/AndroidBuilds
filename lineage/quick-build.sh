@@ -1,22 +1,23 @@
 #!/bin/bash
-# Sample quick build for mako
+# Sample quick build for hammerhead
 device=`adb devices | awk '{if($2 == "device") print $1;}' | tr -d '\n'`
 model=`adb -s $device shell getprop ro.product.model | tr -d '\n'`
 date=`date +%Y%m%d | tr -d '\n'`
-filename="lineage-14.1-"$date"-UNOFFICIAL-mako.zip"
+build="mako"
+filename="lineage-14.1-"$date"-UNOFFICIAL-"$build".zip"
 if [[ $model == 'Nexus 4' ]]; then
         #Measure execution time
         start_time=`date +%s`
         make clobber
         source build/envsetup.sh
-        breakfast mako
-        cd ~/android/mako-lineage-14.1-experimental-prajit/device/lge/mako
+        breakfast $build
+        cd ~/android/$build-lineage-14.1-experimental-prajit/device/lge/$build
         ./extract-files.sh
         export USE_CCACHE=1
         croot
         prebuilts/misc/linux-x86/ccache/ccache -M 50G
         export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"
-        brunch mako
+        brunch $build
         cd $OUT
         adb push $filename /sdcard/
         adb reboot bootloader
