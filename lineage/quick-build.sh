@@ -19,8 +19,10 @@ if [[ $model == 'Nexus 4' ]]; then
         export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"
         brunch $build
         cd $OUT
-        adb push $filename /sdcard/
-        adb reboot bootloader
+	if [[ -f "$filename" ]]; then
+		adb push $filename /sdcard/
+		adb reboot bootloader
+	fi
         end_time=`date +%s`
         echo execution time was `expr $end_time - $start_time` s.
 else
