@@ -12,7 +12,7 @@ if [[ $model == $expected ]]; then
         make clobber
         source build/envsetup.sh
         breakfast $build
-        cd ~/android/$build-lineage-14.1-experimental-prajit/device/lge/$build
+        cd ~/android/$build-lineage-14.1-experimental/device/lge/$build
         ./extract-files.sh
         export USE_CCACHE=1
         croot
